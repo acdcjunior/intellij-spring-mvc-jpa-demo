@@ -1,11 +1,7 @@
 package br.gov.tcu.bbt.web.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import br.gov.tcu.bbt.domain.usuario.Usuario;
 import br.gov.tcu.bbt.domain.usuario.UsuarioRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/usuario")
@@ -41,7 +40,7 @@ public class UsuarioController {
         return "redirect:/usuario";
     }
     
-    @RequestMapping("/string/{sds}")
+    @RequestMapping("/string")
     public ModelAndView variavelString() {
         return new ModelAndView("usuario/string", "variavelString", "Exemplo de como passar variavel!");  
     }
