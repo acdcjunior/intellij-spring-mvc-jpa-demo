@@ -33,12 +33,13 @@ Instituicao.prototype = {
 		if (this.nomeUnico) {
 			componenteInstituicaoGlobal.adicionarAoCache(this.nome, this);
 		}
-		var dsdsdsds = this.cnpj.length > 0;
-		if (dsdsdsds && this.cnpjUnico) {
+		var cnpjFoiPreenchido = this.cnpj.length > 0;
+		if (cnpjFoiPreenchido && this.cnpjUnico) {
 			componenteInstituicaoGlobal.adicionarAoCache(this.cnpj, this);
 		}
-		if (dsdsdsds) {
+		if (cnpjFoiPreenchido) {
 			componenteInstituicaoGlobal.adicionarAoCache(this.getCnpjNome(), this);
+			console.log("Nome usado foi: " + this.getNome());
 		}
 	},
 	
@@ -59,4 +60,8 @@ Instituicao.prototype = {
 		       '"consorciadas":'+jsonConsorciadas+'}';
 	}
 
+};
+
+Instituicao.prototype.getNome = function () {
+	return this.nome;
 };
