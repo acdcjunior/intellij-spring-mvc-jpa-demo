@@ -20,7 +20,7 @@
     <!-- INICIO :: CONTEXTO DA APLICACAO, LOCALIZAR E INICIAR BEANS -->
 
     <context:annotation-config/>
-    <context:component-scan base-package="net.acdcjunior.piloto"/>
+    <context:component-scan base-package="br.gov.tcu.bbt"/>
     
     <!-- FIM :: CONTEXTO DA APLICACAO, LOCALIZAR E INICIAR BEANS -->
     
