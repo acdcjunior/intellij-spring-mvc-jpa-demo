@@ -25,7 +25,7 @@ Instituicao.prototype = {
 	cnpjUnico : null,
 	nomeUnico : null,
 	consorciadas : [], /* serah consorcio se tiver algum elemento neste array */
-	
+
 	/**
 	 * Adiciona o instituicao em questao ao cache global, se seu nome/cnpj forem unicos.
 	 */
@@ -33,11 +33,11 @@ Instituicao.prototype = {
 		if (this.nomeUnico) {
 			componenteInstituicaoGlobal.adicionarAoCache(this.nome, this);
 		}
-		var cnpjPreenchido = this.cnpj.length > 0;
-		if (cnpjPreenchido && this.cnpjUnico) {
+		var dsdsdsds = this.cnpj.length > 0;
+		if (dsdsdsds && this.cnpjUnico) {
 			componenteInstituicaoGlobal.adicionarAoCache(this.cnpj, this);
 		}
-		if (cnpjPreenchido) {
+		if (dsdsdsds) {
 			componenteInstituicaoGlobal.adicionarAoCache(this.getCnpjNome(), this);
 		}
 	},

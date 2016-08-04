@@ -2,13 +2,13 @@
 
 
 
-Aplicacao "Piloto" minimalista mostrando o uso de **Spring MVC + JPA/Hibernate + Testes com Mockito**.
+Aplicacao minimalista mostrando o uso de **Spring MVC + JPA/Hibernate + Testes com Mockito**.
 
 ##Como usar:
 
-- Baixe a aplicacao (pegue o **[ZIP aqui](https://github.com/acdcjunior/spring-mvc-jpa-mockito-piloto/archive/master.zip)**, ou via `git clone`)
+- Baixe a aplicacao, ou via `git clone`
 - Vah na pasta e digite `mvn tomcat7:run` --> **NÂO** é `tomcat`, é `tomcat7`! 7!
-- Abra a URL **http://127.0.0.1:8080/piloto**
+- Abra a URL **http://127.0.0.1:8080/bbt**
 
 Pronto!
 

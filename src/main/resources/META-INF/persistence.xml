@@ -5,11 +5,11 @@
 	                    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
 	version="1.0">
 
-	<persistence-unit name="pilotoPersistenceUnit" transaction-type="RESOURCE_LOCAL">
+	<persistence-unit name="bbtPersistenceUnit" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
 		
 		<!-- Nome JNDI do Data Source -->
-		<non-jta-data-source>java:/comp/env/jdbc/pilotoDataSource</non-jta-data-source>
+		<non-jta-data-source>java:/comp/env/jdbc/bbtDataSource</non-jta-data-source>
 		
 		<!--
 			Arquivos contendo somente as @NamedQueries.

@@ -1,7 +1,7 @@
 package br.gov.tcu.bbt.test;
 
-import br.gov.tcu.bbt.domain.usuario.Usuario;
 import br.gov.tcu.bbt.domain.usuario.Funcao;
+import br.gov.tcu.bbt.domain.usuario.Usuario;
 
 /**
  * Esta classe contem, como objetos, as linhas inseridas no banco de testes.
@@ -9,9 +9,9 @@ import br.gov.tcu.bbt.domain.usuario.Funcao;
  * Por exemplo, a linha:
  * - INSERT INTO `TB_USUARIO` (`ID`, `NOME`) VALUES (1, 'Charles Francis "Professor" Xavier');
  * Equivale ao objeto:
- * {@link PilotoTestDados#usuario_1}.
+ * {@link BbtTestDados#usuario_1}.
  */
-public class PilotoTestDados {
+public class BbtTestDados {
 	
 	public static final Funcao funcao_1 = new Funcao();
 	public static final Funcao funcao_2 = new Funcao();

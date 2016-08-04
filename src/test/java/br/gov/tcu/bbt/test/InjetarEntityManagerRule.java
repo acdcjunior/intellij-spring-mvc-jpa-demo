@@ -1,19 +1,5 @@
 package br.gov.tcu.bbt.test;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.naming.NamingException;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-
 import org.apache.naming.java.javaURLContextFactory;
 import org.h2.jdbcx.JdbcDataSource;
 import org.junit.rules.MethodRule;
@@ -23,14 +9,27 @@ import org.springframework.util.ReflectionUtils;
 import org.springframework.util.ReflectionUtils.FieldCallback;
 import org.springframework.util.ReflectionUtils.FieldFilter;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+
 public class InjetarEntityManagerRule implements MethodRule {
 	
 	@Target(ElementType.FIELD)
 	@Retention(RetentionPolicy.RUNTIME)
 	public static @interface InjetarEntityManager { }
 	
-	private static final String URL_DATA_SOURCE = "java:/comp/env/jdbc/pilotoDataSource";
-	private static final String NOME_PERSISTENCE_UNIT = "pilotoPersistenceUnit";
+	private static final String URL_DATA_SOURCE = "java:/comp/env/jdbc/bbtDataSource";
+	private static final String NOME_PERSISTENCE_UNIT = "bbtPersistenceUnit";
 	private static final String NOME_CAMPO_ENTITYMANAGER = "em";
 	private static final String URL_H2_EM_MEMORIA = "jdbc:h2:mem:bancoDeTestesEmMemoria;INIT=RUNSCRIPT FROM 'classpath:sql/esquema.sql'\\;RUNSCRIPT FROM 'classpath:sql/dados.sql'\\;";
 	

@@ -3,7 +3,7 @@
 	Quando este projeto for deployado em um tomcat, o datasource usado serah o
 	que foi definido pelo JNDI abaixo.
 	-->
-	<ResourceLink global="jdbc/pilotoDataSource" name="jdbc/pilotoDataSource" type="javax.sql.DataSource"/>
+	<ResourceLink global="jdbc/bbtDataSource" name="jdbc/bbtDataSource" type="javax.sql.DataSource"/>
 	
 	
 	
@@ -25,10 +25,10 @@
 	    	
 	       	<Resource
 				auth="Container"
-			    name="jdbc/pilotoDataSource"
+			    name="jdbc/bbtDataSource"
 			    type="javax.sql.DataSource"
 			    driverClassName="org.h2.Driver"
-			    url="jdbc:h2:bancoH2piloto" 
+			    url="jdbc:h2:bancoH2bbt"
 			    username="sa"
 			    password=""
 		   	    maxActive="8"

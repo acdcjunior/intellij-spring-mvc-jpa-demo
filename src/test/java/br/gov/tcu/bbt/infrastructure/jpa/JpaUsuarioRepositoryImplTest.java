@@ -1,26 +1,22 @@
 package br.gov.tcu.bbt.infrastructure.jpa;
 
-import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.hasSize;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-
-import java.util.List;
-import java.util.Set;
-
 import br.gov.tcu.bbt.domain.usuario.Funcao;
 import br.gov.tcu.bbt.domain.usuario.Usuario;
 import br.gov.tcu.bbt.domain.usuario.UsuarioRepository;
-import br.gov.tcu.bbt.test.PilotoTestDados;
+import br.gov.tcu.bbt.test.BbtTestDados;
 import br.gov.tcu.bbt.test.InjetarEntityManagerRule;
 import br.gov.tcu.bbt.test.InjetarEntityManagerRule.InjetarEntityManager;
-
 import org.hamcrest.Matchers;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
+
+import java.util.List;
+import java.util.Set;
+
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 public class JpaUsuarioRepositoryImplTest {
 	
@@ -70,20 +66,20 @@ public class JpaUsuarioRepositoryImplTest {
 	public void findById__deve_encontrar_o_usuario_pelo_id() {
 		// given
 		// when
-		Usuario usuarioObtido = jpaUsuarioRepositoryImpl.findById(PilotoTestDados.usuario_1.getId());
+		Usuario usuarioObtido = jpaUsuarioRepositoryImpl.findById(BbtTestDados.usuario_1.getId());
 		// then
-		Assert.assertEquals(PilotoTestDados.usuario_1.getId(), usuarioObtido.getId());
-		Assert.assertEquals(PilotoTestDados.usuario_1.getNome(), usuarioObtido.getNome());
+		Assert.assertEquals(BbtTestDados.usuario_1.getId(), usuarioObtido.getId());
+		Assert.assertEquals(BbtTestDados.usuario_1.getNome(), usuarioObtido.getNome());
 	}
 	
 	@Test
 	public void findByNome__deve_encontrar_o_usuario_pelo_nome() {
 		// given
 		// when
-		Usuario usuarioObtido = jpaUsuarioRepositoryImpl.findByNome(PilotoTestDados.usuario_1.getNome());
+		Usuario usuarioObtido = jpaUsuarioRepositoryImpl.findByNome(BbtTestDados.usuario_1.getNome());
 		// then
-		Assert.assertEquals(PilotoTestDados.usuario_1.getId(), usuarioObtido.getId());
-		Assert.assertEquals(PilotoTestDados.usuario_1.getNome(), usuarioObtido.getNome());
+		Assert.assertEquals(BbtTestDados.usuario_1.getId(), usuarioObtido.getId());
+		Assert.assertEquals(BbtTestDados.usuario_1.getNome(), usuarioObtido.getNome());
 	}
 	
 	@Test
@@ -93,9 +89,9 @@ public class JpaUsuarioRepositoryImplTest {
 		List<Usuario> todosUsuarios = jpaUsuarioRepositoryImpl.findAll();
 		// then
 		assertThat(todosUsuarios, hasSize(3));
-		assertThat(todosUsuarios, Matchers.hasItem(jpaUsuarioRepositoryImpl.findById(PilotoTestDados.usuario_1.getId())));
-		assertThat(todosUsuarios, Matchers.hasItem(jpaUsuarioRepositoryImpl.findById(PilotoTestDados.usuario_2.getId())));
-		assertThat(todosUsuarios, Matchers.hasItem(jpaUsuarioRepositoryImpl.findById(PilotoTestDados.usuario_3.getId())));
+		assertThat(todosUsuarios, Matchers.hasItem(jpaUsuarioRepositoryImpl.findById(BbtTestDados.usuario_1.getId())));
+		assertThat(todosUsuarios, Matchers.hasItem(jpaUsuarioRepositoryImpl.findById(BbtTestDados.usuario_2.getId())));
+		assertThat(todosUsuarios, Matchers.hasItem(jpaUsuarioRepositoryImpl.findById(BbtTestDados.usuario_3.getId())));
 	}
 	
 	@Test
