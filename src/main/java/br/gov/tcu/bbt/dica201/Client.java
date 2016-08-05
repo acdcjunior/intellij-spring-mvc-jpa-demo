@@ -1,4 +1,4 @@
-package br.gov.tcu.bbt.domain.demo;
+package br.gov.tcu.bbt.dica201;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +12,7 @@ public class Client {
     @Autowired
     private ServiceTwo serviceTwo;
 
+    @SuppressWarnings("unused")
     public void stuff() {
         System.out.println("" + serviceOne + serviceTwo);
     }
